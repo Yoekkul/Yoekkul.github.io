@@ -25,16 +25,18 @@ email: chris@tibaldo.ch
 #   line in _config.yml. It will appear in your document head meta (for
 #   Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://yoekkul.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 github_username:  Yoekkul
 
 # Build settings
 # theme: minima
 # theme: no-style-please # https://github.com/riggraz/no-style-please
-remote_theme: no-style-please
+remote_theme: riggraz/no-style-please
+
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
 
 # Exclude from processing.
 # The following items will not be processed, by default.
