@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Using Synthetic aperture radar and Google Earth Engine to identify ships"
-date:   2023-06-19 21:45:42 +0100
+date:   2023-07-10 17:02:42 +0100
 categories: compilers
 ---
 
