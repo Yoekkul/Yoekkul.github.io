@@ -1,12 +1,14 @@
 entries:
-  - title: info
+  - title: Info
     entries:
-      - title: a (nearly) no-CSS, fast, minimalist Jekyll theme.
-      - title: github repo
-        url: https://github.com/riggraz/no-style-please
-      - title: "used by <a href='https://riggraz.dev'>riggraz.dev</a> and <a href='https://github.com/riggraz/no-style-please/network/dependents'>many others</a>"
+      - title: A collection of projects and ideas by Chris, Computer Science student and bicycle enthusiast
+      - title: Github Repository
+        url: https://github.com/yoekkul
+      - title: Projects page
+        url: projects
+      # - title: "used by <a href='https://riggraz.dev'>riggraz.dev</a> and <a href='https://github.com/riggraz/no-style-please/network/dependents'>many others</a>"
 
-  - title: all posts
+  - title: All posts
     post_list:
       limit: 5
       show_more: true
