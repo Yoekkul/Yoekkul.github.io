@@ -3,6 +3,14 @@ layout: page
 title: Short stories
 ---
 
+
+### ---
+Spiderwebs of morning dew \\
+Cities with their nightly life \\
+Glide under the view \\
+And as ores glitter \\
+In the darkness of the night \\
+
 ### The last alchemist
 I have been invited to the alchemist for tea. \\
 An instant after my knock the door gets ripped open and I pulled in, past tables overflowing with tomes, bubbling beakers and foul smelling powders.
