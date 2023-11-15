@@ -3,13 +3,18 @@ layout: page
 title: Short stories
 ---
 
+### Roads
+Fine strands of road grow like creeping moss where nothing but emptynes resides. \\
+They are not yet veins of civilization, they  hint at its presence. They transform. \\
+"Humans pass here", one day they wisper, "here is safety" they say, "follow our command!" they scream; and just like memory, when not well trod they shift and disappear.
 
-### ---
+
+### From the air
 Spiderwebs of morning dew \\
 Cities with their nightly life \\
 Glide under the view \\
 And as ores glitter \\
-In the darkness of the night \\
+In the darkness of the night
 
 ### The last alchemist
 I have been invited to the alchemist for tea. \\
