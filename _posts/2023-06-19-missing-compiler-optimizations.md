@@ -12,15 +12,15 @@ This blog post will give a short outline of the process used to find these bloat
 ### Assembly bloat example
 
 How GCC bloats an empty printf:  
-{% highlight c %}
-#include <stdio.h>
+<pre><code class="c">
+#include &lt;stdio.h&gt;
 int a;
 int main() { printf("", a); }
-{% endhighlight %}
+</code></pre>
 
 
 GCC 13.1 [-Os]
-{% highlight asm %}
+<pre><code class="x86asm">
 .LC0:
     .string ""
 main:
@@ -34,17 +34,17 @@ main:
     ret
 a:
     .zero   4
-{% endhighlight %}
+</code></pre>
 
 Clang 16.0.0 -Os
-{% highlight asm %}
+<pre><code class="x86asm">
 main:
     xor     eax, eax
     ret
 a:
     .long   0
 
-{% endhighlight %}
+</code></pre>
 
 More examples, as well as a short analysis can be found in our [artifacts branch][arti-branch].
 
@@ -58,14 +58,14 @@ We have conducted our analysis using [Diopter][diopter], a python wrapper around
 ### Example of a test function
 
 Following is an example of one of the test functions used. We noticed that one of the best metrics to quantify the amount of remaining C code was obtained by counting the number of nodes in its Abstract Syntax Tree, instead of the number of characters or lines left in the C file.
-{% highlight python %}
+<pre><code class="python">
 # Compute the ratio using AST to quantify number of lines
 def test_4(self, program: SourceProgram) -> bool:
     root = ast_parser.get_ast_tree(program.code)
     ratio = helper.get_tree_ratio(program,self.Os,root)
 
     return ratio > self.bestRatio
-{% endhighlight %}
+</code></pre>
 
 This test function ensures that the ratio between -O3 and -Os increases in each succesful C-Reduce iteration.
 

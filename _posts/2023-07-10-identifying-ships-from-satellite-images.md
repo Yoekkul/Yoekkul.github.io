@@ -9,7 +9,8 @@ I have a certain fascination with oceans and vessels that get pushed through the
 
 Initially one has to deide which area to focus their attention on. I decided to take a small snapshot of the San Franciso bay, since this is a quite active area and I was thus almost guaranteed to find ships within. Setting the bounds was performed using the following geoJSON object:
 
-{% highlight python %}
+
+<pre><code class="python">
 #tiny San Francisco
 geoJSON = {
   "type": "FeatureCollection",
@@ -47,7 +48,7 @@ geoJSON = {
     }
   ]
 }
-{% endhighlight%}
+</code></pre>
 
 
 Location visualized on https://geojson.io
@@ -57,14 +58,14 @@ Location visualized on https://geojson.io
 ---
 With the following code one is able to obtain SAR (synthetic aperture radar) pictures from the Copernicus Satellite:
 
-{% highlight python %}
+<pre><code class="python">
 #https://developers.google.com/earth-engine/tutorials/community/detecting-changes-in-sentinel-1-imagery-pt-1
 # Define a method for displaying Earth Engine image tiles to folium map.
 def add_ee_layer(self, ee_image_object, vis_params, name):
   map_id_dict = ee.Image(ee_image_object).getMapId(vis_params)
   folium.raster_layers.TileLayer(
     tiles = map_id_dict['tile_fetcher'].url_format,
-    attr = 'Map Data &copy; <a href="https://earthengine.google.com/">Google Earth Engine</a>',
+    attr = 'Map Data &copy; &lt;a href="https://earthengine.google.com/"&gt;Google Earth Engine&lt;/a&gt;',
     name = name,
     overlay = True,
     control = True
@@ -91,7 +92,7 @@ ffa_fl = ee.Image(ee.ImageCollection('COPERNICUS/S1_GRD_FLOAT')
 
 url = ffa_db.select('VV').getThumbURL({'min': -20, 'max': 0})
 disp.Image(url=url, width=800)
-{% endhighlight%}
+</code></pre>
 
 The result looks as follows:
 ![Black and white SAR image](/assets/images/sar_post/sar_01.png)
@@ -101,7 +102,7 @@ In this image we can observe the San-Francisco-Oakland Bay bridge on the bottom 
 ---
 The following code uses a mask already generated in another dataset. This was the most reliable I could find. We take this mask, and additionally expand it by a small threshold. This helps in removing areas with complex sea/land interactions and helps in obtaining more stable results.   
 
-{% highlight python %}
+<pre><code class="python">
 #Water mask test
 hansenImage = ee.Image('UMD/hansen/global_forest_change_2015');
 
@@ -125,7 +126,7 @@ m.add_child(folium.LayerControl())
 
 
 display(m)
-{% endhighlight%}
+</code></pre>
 
 High detail coastlines
 
@@ -161,7 +162,7 @@ Process:
 2. Filter out areas that do not "glow" in the SAR image (Filter out the sea)
 3. Filter out patches of excessive size (accidental inclusion of land masses)
 
-{% highlight python %}
+<pre><code class="python">
 location = aoi.centroid().coordinates().getInfo()[::-1]
 
 
@@ -250,7 +251,7 @@ m.add_child(folium.LayerControl())
 
 display(m)
 
-{% endhighlight %}  
+</code></pre>  
 
 We thus take the following SAR image
 
