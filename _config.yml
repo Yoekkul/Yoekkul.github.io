@@ -29,6 +29,8 @@ url: "https://yoekkul.github.io" # the base hostname & protocol for your site, e
 # twitter_username: jekyllrb
 github_username:  Yoekkul
 
+goat_counter:yoekkul
+
 # Build settings
 # theme: minima
 # theme: no-style-please # https://github.com/riggraz/no-style-please
