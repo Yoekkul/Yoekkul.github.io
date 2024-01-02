@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Mapping movement of PubliBike bike-sharing in zurich"
+title:  "Mapping movement of PubliBike bike-sharing in Zurich"
 date:   2024-01-01 12:01:40 +0100
 categories: web
 ---
@@ -88,7 +88,7 @@ We now have a list of files, corresponding to the status of the stations for eac
   ...
 ```
 
-We now take this file and filter the data within such that we only keep entries which fit in the Zurcih area bounding box. After this is done we obtain the road network of the city from Open Street Map. Having this information we can now estimate a shortest path between two stations and take this as a guess for the taken path. As a final step we need to estimate a timestamp for each intersection in the path. This will help us in creating a smooth animation. This process is done by linearly interpolating the time from the start location to the end location, based on the distance.
+We now take this file and filter the data within such that we only keep entries which fit in the Zurich area bounding box. After this is done we obtain the road network of the city from Open Street Map. Having this information we can now estimate a shortest path between two stations and take this as a guess for the taken path. As a final step we need to estimate a timestamp for each intersection in the path. This will help us in creating a smooth animation. This process is done by linearly interpolating the time from the start location to the end location, based on the distance.
 
 ```
 [
