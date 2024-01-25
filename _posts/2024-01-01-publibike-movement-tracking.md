@@ -5,7 +5,7 @@ date:   2024-01-01 12:01:40 +0100
 categories: web
 ---
 
-[PubliBike Visualization Project](https://publibikes.tibaldo.ch/)
+[PubliBike Visualization Project, Check it out here!](https://publibikes.tibaldo.ch/)
 
 ### What is Publibike
 [PubliBike](https://www.publibike.ch/en/home) is a Swiss bike-sharing service, providing access to classical and electric bikes in multiple cities around Switzerland. Bikes are borrowed and returned at fixed locations. When bikes are returned they can be locked in the proximity of the stations. Data about the status of the stations is freely available [online](https://api.publibike.ch/v1/static/api.html).
